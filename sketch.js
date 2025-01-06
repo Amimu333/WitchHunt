@@ -233,7 +233,7 @@ function Ready()
   Re.style("background-color", "transparent");
   Re.style("border", "none");
   Re.style("display", "none");
-  Re.mousePressed(ReStart);
+  Re.mousePressed(ReGame);
   
   Map();
   
@@ -266,8 +266,6 @@ function Next1()
   
   print("說明1");
 }
-
-
 
 function Next2()
 { 
@@ -440,12 +438,6 @@ function Next10()
   }
 }
 
-function ReStart()
-{
-  window.location.reload();
-}
-
-
 function Map()
 {
   background(142, 180, 140);
@@ -517,7 +509,7 @@ function Burn(N)
       noStroke(); fill(210, 228, 212); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.05); text('通過了第一層', width/2, height/2-ButtonSize*0.3); textStyle(NORMAL);
       
-      R = round(random(1, 5));
+      R = round(random(1, 6));
       
       if(R==1)
       {
@@ -542,6 +534,7 @@ function Burn(N)
         fill(84, 90, 80); textSize(width*0.04); text('淺層的森林相當地安全', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
         fill(84, 90, 80); textSize(width*0.04); text('你還能看到卡樹在睡覺',   width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==4)
       {
         image(Diaper, width/2-ButtonSize-5, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2); 
@@ -549,12 +542,21 @@ function Burn(N)
         fill(84, 90, 80); textSize(width*0.04); text('樹根旁掉了狐寶的布布', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
         fill(84, 90, 80); textSize(width*0.04); text('那臭味警告你別太靠近',   width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==5)
       {
         image(UnclePenguin, width/2-ButtonSize*0.9, height/2-ButtonSize*2.7, ButtonSize*1.8, ButtonSize*1.8); 
         fill(84, 90, 80); textSize(width*0.04); text('你沒遇到女巫的陷阱', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
         fill(84, 90, 80); textSize(width*0.04); text('鵝叔全裸寫真掉在地上', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
         fill(84, 90, 80); textSize(width*0.04); text('但你毫無興趣直接踩過',   width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==6)
+      {
+        image(Tree, width/2-ButtonSize-5, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2); 
+        fill(84, 90, 80); textSize(width*0.04); text('你沒遇到女巫的陷阱', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+        fill(84, 90, 80); textSize(width*0.04); text('穿越過綠意盎然的森林', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+        fill(84, 90, 80); textSize(width*0.04); text('享受沒有咪咪叫的環境',   width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
@@ -1086,4 +1088,28 @@ function Burn(N)
 function windowResized() 
 {
   window.location.reload();
+}
+
+function ReGame()
+{
+  Area = 0;
+  Re.style("display", "none");
+  
+  WizardNumber1[1] = round(random(1, 7));
+  
+  for(let i = 1; i < 3; i++) { WizardNumber2[i] = round(random( 8, 14)); }
+  
+  for(let i = 1; i < 4; i++) { WizardNumber3[i] = round(random(15, 21)); }
+  
+  for(let i = 1; i < 5; i++) { WizardNumber4[i] = round(random(22, 28)); }
+  
+  for(let i = 1; i < 6; i++) { WizardNumber5[i] = round(random(29, 35)); }
+  
+  for(let i = 1; i < 7; i++) { WizardNumber6[i] = round(random(36, 42)); }
+  
+  Map();
+  
+  noStroke(); fill(0, 100); rect(0, 0, width, height);
+  
+  Next1();
 }
