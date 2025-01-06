@@ -45,6 +45,25 @@ function setup()
   createCanvas(windowWidth, windowHeight);
   textAlign(CENTER, CENTER); textStyle(BOLD); textFont('微軟正黑體');
   
+  if(windowWidth < windowHeight)
+  {
+    Ready();
+  }
+  else
+  {
+    background(142, 180, 140);
+    for(let i = 0; i < 30; i++)
+    {
+      image(Grass,   random(0, width), random(0, height), height*0.05, height*0.05);   
+    }
+    image(Hippo,  width/2-height*0.32/2, height/2-height*0.25, height*0.3, height*0.3);
+    fill(255); textSize(height*0.05); text('抱歉，不支援橫向遊玩', width/2, height/2+height*0.1);
+  }
+  
+}
+
+function Ready()
+{
   GameWidth = width-10;
   ButtonSize = GameWidth/7;
   
@@ -221,7 +240,7 @@ function setup()
   noStroke(); fill(0, 100); rect(0, 0, width, height);
   
   Next1();
-}  
+}
   
 
 function Next1()
@@ -975,4 +994,9 @@ function Burn(N)
       Re.style("display", "block");
     }
   }
+}
+
+function windowResized() 
+{
+  window.location.reload();
 }
