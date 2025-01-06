@@ -1,12 +1,13 @@
-let Forest = []; let Skip; let Next = []; let Back = []; let Re;
+let Forest = []; let Skip; let Next = []; let Back = []; let Re; let Backtrace; let Outer = []; let Curiosity;
 let ButtonSize = 0;
 let GameWidth = 0;
 
 let Gradient; let RiverBank; let RiverBank2; let Grass; let Grass2; let Railing;
 let HippoHouse; let FoxHouse; let MiHouse; let WitchHouse; let DeadTree; let Skull; let Bridge; let MagicTree; let Tree;
 let Hippo; let Wizard; let Explore; let Cheetah; let Diaper; let UnclePenguin; let Seal; let Fossil; let Ghost; let Eggplant; let Green; let Sacrifice; let Trial;
+let Cthugha; let YogSothoth; let Hastur;
 
-let HippoNumber = 0; let Area = 0; let WizardNumber1 = []; let WizardNumber2 = []; let WizardNumber3 = []; let WizardNumber4 = []; let WizardNumber5 = []; let WizardNumber6 = [];
+let HippoNumber = 0; let Area = 0; let WizardNumber1 = []; let WizardNumber2 = []; let WizardNumber3 = []; let WizardNumber4 = []; let WizardNumber5 = []; let WizardNumber6 = []; let O = 0;
 
 function preload() 
 {
@@ -38,6 +39,9 @@ function preload()
   Green        = loadImage('Green.png');
   Sacrifice    = loadImage('Sacrifice.png');
   Trial        = loadImage('Trial.png');
+  Cthugha      = loadImage('Cthugha.png');
+  YogSothoth   = loadImage('YogSothoth.png');
+  Hastur       = loadImage('Hastur.png');
 }
 
 function setup() 
@@ -234,6 +238,39 @@ function Ready()
   Re.style("border", "none");
   Re.style("display", "none");
   Re.mousePressed(ReGame);
+  
+  Curiosity = createButton("");
+  Curiosity.position(width/2-ButtonSize*0.95, height/2-ButtonSize*2.8);
+  Curiosity.size(ButtonSize*1.8, ButtonSize*1.8);
+  Curiosity.style("background-color", "transparent");
+  Curiosity.style("border", "none");
+  Curiosity.style("display", "none");
+  Curiosity.mousePressed(Next10_2);
+  
+  //Outer
+  Backtrace = createButton("");
+  Backtrace.position(width/2+ButtonSize/4-10, height/2-ButtonSize/2+width*0.4+ButtonSize/4);
+  Backtrace.size(width*0.4-ButtonSize/4, ButtonSize);
+  Backtrace.style("background-color", "transparent");
+  Backtrace.style("border", "none");
+  Backtrace.style("display", "none");
+  Backtrace.mousePressed(ReGame);
+  
+  Outer[1] = createButton("");
+  Outer[1].position(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4);
+  Outer[1].size(width*0.4-ButtonSize/4, ButtonSize);
+  Outer[1].style("background-color", "transparent");
+  Outer[1].style("border", "none");
+  Outer[1].style("display", "none");
+  Outer[1].mousePressed(Next11);
+  
+  Outer[2] = createButton("");
+  Outer[2].position(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4);
+  Outer[2].size(width*0.4-ButtonSize/4, ButtonSize);
+  Outer[2].style("background-color", "transparent");
+  Outer[2].style("border", "none");
+  Outer[2].style("display", "none");
+  Outer[2].mousePressed(Next12);
   
   Map();
   
@@ -438,6 +475,65 @@ function Next10()
   }
 }
 
+function Next10_2()
+{
+  Re.style("display", "none");
+  Curiosity.style("display", "none");
+  Map();
+  noStroke(); fill(0, 100); rect(0, 0, width, height);
+  
+  noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
+  image(Sacrifice,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
+      
+  if(O==1)
+  {
+    fill(84, 80, 90); textSize(width*0.05); text('糟$%，太晚#%@', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+    fill(84, 80, 90); textSize(width*0.04); text('你抵$%^了女巫家(*^', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('但Ph)(%&太晚已@#$來ghaa不及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('$%#祭男巫Ia ▙ ▗ ▚ 了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+  }
+      
+  if(O==2)
+  {
+    fill(84, 80, 90); textSize(width*0.05); text('不$%，*&^急了', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+    fill(84, 80, 90); textSize(width*0.04); text('你Ia$%達了Ia女@<家前', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('但$%<太Ia晚已n-yah經來%{及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('*&祭男巫Y-hah ▙ ▗ ▚ 了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+  }
+      
+  if(O==3)
+  {
+    fill(84, 80, 90); textSize(width*0.05); text('$蛋%，停*&^了', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+    fill(84, 80, 90); textSize(width*0.04); text('你Ia抵%^了女巫Ia家^&', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('但是%*&晚Ugh已@#來*&%及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('獻!@#Shub-男巫 ▙ ▗ ▚ 了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+  }      
+  
+  noStroke(); fill(210, 103, 95); rect(width/2+ButtonSize/4-10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+  fill(255); textStyle(BOLD); textSize(width*0.04); text('阻止 ▙ 祭', width/2+ButtonSize/4-10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+  
+  noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+  fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前進?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+        
+  Backtrace.style("display", "block");
+  Outer[1].style("display", "block");
+}
+
+function Next11()
+{
+  Area = 7;
+  Outer[1].style("display", "none");
+  Burn();
+}
+
+function Next12()
+{
+  Area = 8;
+  Outer[2].style("display", "none");
+  Backtrace.style("display", "none");
+  Burn();
+}
+
 function Map()
 {
   background(142, 180, 140);
@@ -492,12 +588,13 @@ function Map()
   image(DeadTree,   ButtonSize*4.0,  height/2-GameWidth/7/2-5-ButtonSize*5.0, ButtonSize*1.0, ButtonSize*1.0);
   image(Skull,      ButtonSize*5.0,  height/2-GameWidth/7/2-5-ButtonSize*3.7, ButtonSize*0.3, ButtonSize*0.3);
   image(Skull,      ButtonSize*2.0,  height/2-GameWidth/7/2-5-ButtonSize*4.3, ButtonSize*0.3, ButtonSize*0.3);
-  image(Bridge,     ButtonSize*2.8,  height/2-GameWidth/7/2-5-ButtonSize*0.3,ButtonSize*1.5, ButtonSize*1.5);
+  image(Bridge,     ButtonSize*2.8,  height/2-GameWidth/7/2-5-ButtonSize*0.3, ButtonSize*1.5, ButtonSize*1.5);
 }
 
 function Burn(N)
 {
   //print(N);
+  //if(Area<6){Area = 6;}
   
   if(Area == 1 && N <= 7)
   {
@@ -735,7 +832,7 @@ function Burn(N)
       noStroke(); fill(210, 228, 228); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.05); text('通過了第三層', width/2, height/2-ButtonSize*0.3); textStyle(NORMAL);
       
-      R = round(random(1, 5));
+      R = round(random(1, 6));
       
       if(R==1)
       {
@@ -779,6 +876,20 @@ function Burn(N)
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+      
+      if(R==6)
+      {
+        noStroke(); fill(219, 210, 228); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
+        fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+        
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了男...咦人呢?', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('此處男巫被旅人帶走了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('沒男巫可燒進續前進吧', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+        
+        noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
+        fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+      }
+      
       Next[7].style("display", "block");
     }
     else
@@ -1056,6 +1167,7 @@ function Burn(N)
       
       if(R==1)
       {
+        O = R;
         fill(84, 80, 90); textSize(width*0.05); text('糟$%，太晚#%@', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
         fill(84, 80, 90); textSize(width*0.04); text('你抵$%^了女巫家(*^', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('但Ph)(%&太晚已@#$來ghaa不及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
@@ -1064,6 +1176,7 @@ function Burn(N)
       
       if(R==2)
       {
+        O = R;
         fill(84, 80, 90); textSize(width*0.05); text('不$%，*&^急了', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
         fill(84, 80, 90); textSize(width*0.04); text('你Ia$%達了Ia女@<家前', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('但$%<太Ia晚已n-yah經來%{及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
@@ -1072,17 +1185,165 @@ function Burn(N)
       
       if(R==3)
       {
+        O = R;
         fill(84, 80, 90); textSize(width*0.05); text('$蛋%，停*&^了', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
         fill(84, 80, 90); textSize(width*0.04); text('你Ia抵%^了女巫Ia家^&', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('但是%*&晚Ugh已@#來*&%及', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獻!@#Shub-男巫 ▙ ▗ ▚ 了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
-      noStroke(); fill(210, 103, 95); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
-      fill(255); textStyle(BOLD); textSize(width*0.04); text('阻止 ▙ 祭',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      R2 = round(random(1, 10));
+      
+      //R2=10;
+      
+      if(R2 == 10)
+      {
+        noStroke(); fill(210, 103, 95); rect(width/2+ButtonSize/4-10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+        fill(255); textStyle(BOLD); textSize(width*0.04); text('阻止 ▙ 祭', width/2+ButtonSize/4-10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+  
+        noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+        fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前進?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+        
+        Backtrace.style("display", "block");
+        Outer[1].style("display", "block");
+      }
+      else
+      {
+        noStroke(); fill(210, 103, 95); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
+        fill(255); textStyle(BOLD); textSize(width*0.04); text('阻止 ▙ 祭',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+        Re.style("display", "block");
+        Curiosity.style("display", "block");
+      }
     }
   }
+  if(Area == 7)
+  {
+    noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
+    image(WitchHouse, width/2-ButtonSize*1.25, height/2-ButtonSize*3, ButtonSize*2.5, ButtonSize*2.5);  textStyle(BOLD);
+    
+    fill(84, 80, 90); textSize(width*0.05); text('*&$前(*探#$竟', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+    fill(84, 80, 90); textSize(width*0.04); text('&^Ia的召#$已*&始', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('趕$^&回)Ia開#@', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('世Ia(>^%@結!@*', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+    
+    noStroke(); fill(210, 103, 95); rect(width/2+ButtonSize/4-10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+    fill(255); textStyle(BOLD); textSize(width*0.04); text('回 ▚ ▙ 離', width/2+ButtonSize/4-10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+    
+    noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+    fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前▗ ?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+    
+    Outer[2].style("display", "block");
+    
+    for(let i = 0; i < 30; i++)
+    {
+      if(O==1) { fill(210, 103, 95); }
+      if(O==2) { fill(255); }
+      if(O==3) { fill(255, 224, 147); }
+      noStroke(); rect(random(0, width), random(0, height), ButtonSize*random(0, 0.5), ButtonSize/8); 
+    }
+  }
+  if(Area == 8)
+  {
+    noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
+    
+    noStroke(); fill(210, 103, 95); rect(width/2+ButtonSize/4-10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+    fill(255); textStyle(BOLD); textSize(width*0.04); text('▚ ^& ▙ )@', width/2+ButtonSize/4-10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+    
+    noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
+    fill(255); textStyle(BOLD); textSize(width*0.04); text('▗ (*@ ▚ ?@?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+    
+    if(O==1) 
+    { 
+      image(Cthugha, width/2-ButtonSize, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2);  textStyle(BOLD); 
+      
+      fill(84, 80, 90); textSize(width*0.04); text("Ph'nglui mgfw'nafh Cthugha", width/2, height/2-ButtonSize+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("Fomalhaut n'gha-ghaa naf'l thagn!", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("Ia! Cthugha!", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07+width*0.07);
+    }
+    if(O==2) 
+    { 
+      image(YogSothoth, width/2-ButtonSize, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2);  textStyle(BOLD); 
+      
+      fill(84, 80, 90); textSize(width*0.04); text("Ia! Ia! N'ghaa n'nghai!", width/2, height/2-ButtonSize+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("Ia! Ia! N'gai, n'yah, n-yah,", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("shoggog, phfaghn!", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07+width*0.07);
+    }
+    if(O==3) 
+    { 
+      image(Hastur, width/2-ButtonSize, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2);  textStyle(BOLD); 
+      
+      fill(84, 80, 90); textSize(width*0.04); text("Iä! Iä! Hastur! Ugh! Ugh!", width/2, height/2-ButtonSize+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("Iä Hastur cf' ayak 'vulgtmm,", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07);
+      fill(84, 80, 90); textSize(width*0.04); text("vugtlagln vulgtmm!", width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07+width*0.07);
+    }
+    for(let i = 0; i < 30; i++)
+    {
+      if(O==1) { fill(210, 103, 95); }
+      if(O==2) { fill(255); }
+      if(O==3) { fill(255, 224, 147); }
+      noStroke(); rect(random(0, width), random(0, height), ButtonSize*random(0, 0.5), ButtonSize/8); 
+    }
+    Area = 9;
+  }
+}
+
+let D1 = 3; let D2 = 0.0005; let D3 = 0.02;
+
+function draw()
+{
+  if(Area == 9)
+  {
+    if(D1>200) { D1 = 200; }
+    if(D2>0.05)
+    {
+      for(let i = 0; i < D1; i++)
+      {
+        if(O==1) { fill(210, 103, 95); }
+        if(O==2) { fill(255); }
+        if(O==3) { fill(255, 224, 147); }
+        noStroke(); rect(random(0, width+100), random(0, height+100), ButtonSize*random(0, 0.7), ButtonSize/6); 
+      }
+      
+      if(O==1) { fill(210, 103, 95, 1); }
+      if(O==2) { fill(255, 1); }
+      if(O==3) { fill(255, 224, 147, 1); }
+      noStroke(); rect(0, 0, width, height); 
+      
+      D1 = D1 + D3;
+      D3 = D3 + 0.02;
+    }
+    else
+    {
+      if(O==1) { fill(210, 103, 95); }
+      if(O==2) { fill(255); }
+      if(O==3) { fill(255, 224, 147); }
+      noStroke(); rect(random(0, width+100), random(0, height+100), ButtonSize*random(0, 0.5), ButtonSize/10); 
+    }
+    D2 = D2 + 0.0005;
+    
+    if(D2>0.13)
+    {
+      if(O==1) { background(210, 103, 95); }
+      if(O==2) { background(255); }
+      if(O==3) { background(255, 224, 147); }
+    }
+    
+    if(D1>200)
+    {
+      if(O==1) { fill(210, 103, 95, 50); }
+      if(O==2) { fill(255, 50); }
+      if(O==3) { fill(255, 224, 147, 50); }
+      noStroke(); rect(0, 0, width, height); 
+      
+      if(O==1) { fill(255); }
+      if(O==2) { fill(84, 80, 90); }
+      if(O==3) { fill(84, 80, 90); }
+      textSize(width*0.07); textStyle(BOLD); text('失敗', width/2, height/2-ButtonSize); textStyle(NORMAL);
+      textSize(width*0.04); text('見到偉大的存在', width/2, height/2-ButtonSize+width*0.07+width*0.07);
+      textSize(width*0.04); text('你理解了一切', width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07);
+    }
+  }
+  print(Area);
 }
 
 function windowResized() 
@@ -1093,7 +1354,13 @@ function windowResized()
 function ReGame()
 {
   Area = 0;
+  D1 = D2 = D3 = 0;
+  
   Re.style("display", "none");
+  Outer[1].style("display", "none");
+  Outer[2].style("display", "none");
+  Backtrace.style("display", "none");
+  Curiosity.style("display", "none");
   
   WizardNumber1[1] = round(random(1, 7));
   
