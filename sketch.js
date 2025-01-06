@@ -567,7 +567,8 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 5));
+      
       if(R==1)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
@@ -575,6 +576,7 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==2)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
@@ -582,10 +584,27 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==3)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('母胎單身的他仍是處男', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==4)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('年過三十的他仍沒對象', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==5)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('年過四十仍沒建立家庭', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
@@ -657,7 +676,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 5));
       
       if(R==1)
       {
@@ -666,6 +685,7 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==2)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
@@ -673,10 +693,27 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==3)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('單身的他喜愛四處蕉流', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==4)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('他喊道哼哼啊啊啊啊啊', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==5)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('他驚恐大喊河馬哥不要!', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
@@ -748,7 +785,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 5));
       
       if(R==1)
       {
@@ -757,6 +794,7 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==2)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
@@ -764,10 +802,27 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
+      
       if(R==3)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('是個會傾聽抱怨的樹洞', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==4)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是個善於做點心的暖男', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==5)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是個喜愛喝咖啡的型男', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
@@ -823,7 +878,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 6));
       
       if(R==1)
       {
@@ -845,6 +900,30 @@ function Burn(N)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('是出沒在吵架噗的猴子', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==4)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是出沒在偷偷說的噗姨', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==5)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是出沒轉蛋噗的大金主', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==6)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是出沒廢噗的噗幣天使', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
@@ -900,7 +979,7 @@ function Burn(N)
       image(Green,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 4));
+      R = round(random(1, 5));
       
       if(R==1)
       {
@@ -930,6 +1009,14 @@ function Burn(N)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('是一位強大的綠光戰警', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==5)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是位選擇原諒的原諒俠', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
