@@ -379,12 +379,21 @@ function Next5()
   Next[4].style("display", "none");
   
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j==0) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else     { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j==0) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else     { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j==0) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else     { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -395,13 +404,23 @@ function Next6()
   Area = 2;
   Next[5].style("display", "none");
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j==0)      { Forest[j*7+i].style("background-image", "url('Tree.png')"); }
-      else if(j==1) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else          { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j==0)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else if(j==1) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j==0)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else if(j==1) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -412,13 +431,23 @@ function Next7()
   Area = 3;
   Next[6].style("display", "none");
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j<=1)      { Forest[j*7+i].style("background-image", "url('Tree.png')"); }
-      else if(j==2) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else          { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j<=1)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else if(j==2) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j<=1)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else if(j==2) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -429,13 +458,23 @@ function Next8()
   Area = 4;
   Next[7].style("display", "none");
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j<=2)      { Forest[j*7+i].style("background-image", "url('Tree.png')"); }
-      else if(j==3) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else          { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j<=2)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else if(j==3) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j<=2)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else if(j==3) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -446,13 +485,23 @@ function Next9()
   Area = 5;
   Next[8].style("display", "none");
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j<=3)      { Forest[j*7+i].style("background-image", "url('Tree.png')"); }
-      else if(j==4) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else          { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j<=3)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else if(j==4) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j<=3)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else if(j==4) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -463,13 +512,23 @@ function Next10()
   Area = 6;
   Next[9].style("display", "none");
   Map();
-  for(let j = 0; j < 6; j++) 
+  for(let j = 0; j < 3; j++) 
   { 
     for(let i = 1; i < 8; i++) 
     { 
-      if(j<=4)      { Forest[j*7+i].style("background-image", "url('Tree.png')"); }
-      else if(j==5) { Forest[j*7+i].style("background-image", "url('Explore.png')"); }
-      else          { Forest[j*7+i].style("background-image", "url('MagicTree.png')"); }
+      if(j<=4)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else if(j==5) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
+      Forest[j*7+i].style("display", "block"); 
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      if(j<=4)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else if(j==5) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
+      else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       Forest[j*7+i].style("display", "block"); 
     } 
   }
@@ -480,6 +539,21 @@ function Next10_2()
   Re.style("display", "none");
   Curiosity.style("display", "none");
   Map();
+  Map();
+  for(let j = 0; j < 3; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      image(Tree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize);
+    } 
+  }
+  for(let j = 3; j < 6; j++) 
+  { 
+    for(let i = 1; i < 8; i++) 
+    { 
+      image(Tree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize);
+    } 
+  }
   noStroke(); fill(0, 100); rect(0, 0, width, height);
   
   noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
@@ -884,7 +958,7 @@ function Burn(N)
         
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了男...咦人呢?', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('此處男巫被旅人帶走了', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
-        fill(84, 80, 90); textSize(width*0.04); text('沒男巫可燒進續前進吧', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('沒男巫可燒繼續前進吧', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
         
         noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
         fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
@@ -898,7 +972,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 5));
+      R = round(random(1, 7));
       
       if(R==1)
       {
@@ -940,6 +1014,22 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
+      if(R==6)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是個體貼會撒嬌的正太', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==7)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是一個可攻可受的霸總', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
       Re.style("display", "block");
@@ -955,7 +1045,7 @@ function Burn(N)
       noStroke(); fill(210, 228, 228); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.05); text('通過了第四層', width/2, height/2-ButtonSize*0.3); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 4));
       
       if(R==1)
       {
@@ -981,6 +1071,14 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('是一個噗幣乞丐的遺骨', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
+      if(R==4)
+      {
+        image(Skull, width/2-ButtonSize*0.8, height/2-ButtonSize*2.3, ButtonSize*1.5, ButtonSize*1.5); 
+        fill(84, 80, 90); textSize(width*0.04); text('你成功來到森林對面', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('被地上的物體絆到了腳', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是人不見的安價主遺骨', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
       Next[8].style("display", "block");
@@ -991,7 +1089,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 6));
+      R = round(random(1, 7));
       
       if(R==1)
       {
@@ -1037,6 +1135,14 @@ function Burn(N)
       {
         fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('是出沒廢噗的噗幣天使', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==7)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了wizard4437', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('他沒通關被抓進遊戲裡', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
