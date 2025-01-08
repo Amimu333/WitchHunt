@@ -96,7 +96,7 @@ function Ready()
       //Forest[j*7+i].style("background-image", "url('MagicTree.png')");
       Forest[j*7+i].style("background-size", "cover");
       Forest[j*7+i].style("border", "none");
-      Forest[j*7+i].style("display", "none");
+      Forest[j*7+i].style("visibility", "hidden");
       Forest[j*7+i].mousePressed(() => Burn(j*7+i));
     }
   }
@@ -112,7 +112,7 @@ function Ready()
       //Forest[j*7+i].style("background-image", "url('MagicTree.png')");
       Forest[j*7+i].style("background-size", "cover");
       Forest[j*7+i].style("border", "none");
-      Forest[j*7+i].style("display", "none");
+      Forest[j*7+i].style("visibility", "hidden");
       Forest[j*7+i].mousePressed(() => Burn(j*7+i));
     }
   }
@@ -123,7 +123,7 @@ function Ready()
   Next[1].size(width*0.4-ButtonSize/4, ButtonSize);
   Next[1].style("background-color", "transparent");
   Next[1].style("border", "none");
-  Next[1].style("display", "none");
+  Next[1].style("visibility", "hidden");
   Next[1].mousePressed(Next2);
   
   Skip = createButton("");
@@ -131,7 +131,7 @@ function Ready()
   Skip.size(width*0.4-ButtonSize/4, ButtonSize);
   Skip.style("background-color", "transparent");
   Skip.style("border", "none");
-  Skip.style("display", "none");
+  Skip.style("visibility", "hidden");
   Skip.mousePressed(Next5);
   
   //next2
@@ -140,7 +140,7 @@ function Ready()
   Next[2].size(width*0.4-ButtonSize/4, ButtonSize);
   Next[2].style("background-color", "transparent");
   Next[2].style("border", "none");
-  Next[2].style("display", "none");
+  Next[2].style("visibility", "hidden");
   Next[2].mousePressed(Next3);
   
   Back[2] = createButton("");
@@ -148,7 +148,7 @@ function Ready()
   Back[2].size(width*0.4-ButtonSize/4, ButtonSize);
   Back[2].style("background-color", "transparent");
   Back[2].style("border", "none");
-  Back[2].style("display", "none");
+  Back[2].style("visibility", "hidden");
   Back[2].mousePressed(Next1);
   
   //next3
@@ -157,7 +157,7 @@ function Ready()
   Next[3].size(width*0.4-ButtonSize/4, ButtonSize);
   Next[3].style("background-color", "transparent");
   Next[3].style("border", "none");
-  Next[3].style("display", "none");
+  Next[3].style("visibility", "hidden");
   Next[3].mousePressed(Next4);
   
   Back[3] = createButton("");
@@ -165,7 +165,7 @@ function Ready()
   Back[3].size(width*0.4-ButtonSize/4, ButtonSize);
   Back[3].style("background-color", "transparent");
   Back[3].style("border", "none");
-  Back[3].style("display", "none");
+  Back[3].style("visibility", "hidden");
   Back[3].mousePressed(Next2);
   
   //next4
@@ -174,7 +174,7 @@ function Ready()
   Next[4].size(width*0.4-ButtonSize/4, ButtonSize);
   Next[4].style("background-color", "transparent");
   Next[4].style("border", "none");
-  Next[4].style("display", "none");
+  Next[4].style("visibility", "hidden");
   Next[4].mousePressed(Next5);
   
   Back[4] = createButton("");
@@ -182,7 +182,7 @@ function Ready()
   Back[4].size(width*0.4-ButtonSize/4, ButtonSize);
   Back[4].style("background-color", "transparent");
   Back[4].style("border", "none");
-  Back[4].style("display", "none");
+  Back[4].style("visibility", "hidden");
   Back[4].mousePressed(Next3);
   
   //next5
@@ -191,7 +191,7 @@ function Ready()
   Next[5].size(width*0.4, ButtonSize);
   Next[5].style("background-color", "transparent");
   Next[5].style("border", "none");
-  Next[5].style("display", "none");
+  Next[5].style("visibility", "hidden");
   Next[5].mousePressed(Next6);
   
   //next6
@@ -200,7 +200,7 @@ function Ready()
   Next[6].size(width*0.4, ButtonSize);
   Next[6].style("background-color", "transparent");
   Next[6].style("border", "none");
-  Next[6].style("display", "none");
+  Next[6].style("visibility", "hidden");
   Next[6].mousePressed(Next7);
   
   //next7
@@ -209,7 +209,7 @@ function Ready()
   Next[7].size(width*0.4, ButtonSize);
   Next[7].style("background-color", "transparent");
   Next[7].style("border", "none");
-  Next[7].style("display", "none");
+  Next[7].style("visibility", "hidden");
   Next[7].mousePressed(Next8);
   
   //next8
@@ -218,7 +218,7 @@ function Ready()
   Next[8].size(width*0.4, ButtonSize);
   Next[8].style("background-color", "transparent");
   Next[8].style("border", "none");
-  Next[8].style("display", "none");
+  Next[8].style("visibility", "hidden");
   Next[8].mousePressed(Next9);
   
   //next9
@@ -227,7 +227,7 @@ function Ready()
   Next[9].size(width*0.4, ButtonSize);
   Next[9].style("background-color", "transparent");
   Next[9].style("border", "none");
-  Next[9].style("display", "none");
+  Next[9].style("visibility", "hidden");
   Next[9].mousePressed(Next10);
   
   //Re
@@ -236,7 +236,7 @@ function Ready()
   Re.size(width*0.4, ButtonSize);
   Re.style("background-color", "transparent");
   Re.style("border", "none");
-  Re.style("display", "none");
+  Re.style("visibility", "hidden");
   Re.mousePressed(ReGame);
   
   Curiosity = createButton("");
@@ -244,7 +244,7 @@ function Ready()
   Curiosity.size(ButtonSize*1.8, ButtonSize*1.8);
   Curiosity.style("background-color", "transparent");
   Curiosity.style("border", "none");
-  Curiosity.style("display", "none");
+  Curiosity.style("visibility", "hidden");
   Curiosity.mousePressed(Next10_2);
   
   //Outer
@@ -253,7 +253,7 @@ function Ready()
   Backtrace.size(width*0.4-ButtonSize/4, ButtonSize);
   Backtrace.style("background-color", "transparent");
   Backtrace.style("border", "none");
-  Backtrace.style("display", "none");
+  Backtrace.style("visibility", "hidden");
   Backtrace.mousePressed(ReGame);
   
   Outer[1] = createButton("");
@@ -261,7 +261,7 @@ function Ready()
   Outer[1].size(width*0.4-ButtonSize/4, ButtonSize);
   Outer[1].style("background-color", "transparent");
   Outer[1].style("border", "none");
-  Outer[1].style("display", "none");
+  Outer[1].style("visibility", "hidden");
   Outer[1].mousePressed(Next11);
   
   Outer[2] = createButton("");
@@ -269,7 +269,7 @@ function Ready()
   Outer[2].size(width*0.4-ButtonSize/4, ButtonSize);
   Outer[2].style("background-color", "transparent");
   Outer[2].style("border", "none");
-  Outer[2].style("display", "none");
+  Outer[2].style("visibility", "hidden");
   Outer[2].mousePressed(Next12);
   
   Map();
@@ -282,11 +282,11 @@ function Ready()
 
 function Next1()
 {
-  Back[2].style("display", "none");
-  Next[2].style("display", "none");
+  Back[2].style("visibility", "hidden");
+  Next[2].style("visibility", "hidden");
   
-  Skip.style("display", "block");
-  Next[1].style("display", "block");
+  Skip.style("visibility", "visible");
+  Next[1].style("visibility", "visible");
   
   noStroke(); fill(228, 211, 210); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
   image(Hippo,  width/2-ButtonSize-5, height/2-ButtonSize*3, ButtonSize*2, ButtonSize*2);
@@ -306,14 +306,14 @@ function Next1()
 
 function Next2()
 { 
-  Skip.style("display", "none");
-  Next[1].style("display", "none");
+  Skip.style("visibility", "hidden");
+  Next[1].style("visibility", "hidden");
   
-  Back[3].style("display", "none");
-  Next[3].style("display", "none");
+  Back[3].style("visibility", "hidden");
+  Next[3].style("visibility", "hidden");
   
-  Next[2].style("display", "block");
-  Back[2].style("display", "block");
+  Next[2].style("visibility", "visible");
+  Back[2].style("visibility", "visible");
   
   noStroke(); fill(228, 211, 210); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
   image(MagicTree,  width/2-ButtonSize-5, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2); textStyle(NORMAL);
@@ -330,14 +330,14 @@ function Next2()
 
 function Next3()
 {
-  Back[2].style("display", "none");
-  Next[2].style("display", "none");
+  Back[2].style("visibility", "hidden");
+  Next[2].style("visibility", "hidden");
   
-  Back[4].style("display", "none");
-  Next[4].style("display", "none");
+  Back[4].style("visibility", "hidden");
+  Next[4].style("visibility", "hidden");
   
-  Next[3].style("display", "block");
-  Back[3].style("display", "block");
+  Next[3].style("visibility", "visible");
+  Back[3].style("visibility", "visible");
   
   noStroke(); fill(228, 211, 210); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
   image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.6, ButtonSize*1.8, ButtonSize*1.8); textStyle(NORMAL);
@@ -350,11 +350,11 @@ function Next3()
 
 function Next4()
 {
-  Back[3].style("display", "none");
-  Next[3].style("display", "none");
+  Back[3].style("visibility", "hidden");
+  Next[3].style("visibility", "hidden");
   
-  Next[4].style("display", "block");
-  Back[4].style("display", "block");
+  Next[4].style("visibility", "visible");
+  Back[4].style("visibility", "visible");
   
   noStroke(); fill(228, 211, 210); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
   image(Explore,  width/2-ButtonSize-5, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2); textStyle(NORMAL);
@@ -372,11 +372,11 @@ function Next5()
 {
   Area = 1;
   
-  Skip.style("display", "none");
-  Next[1].style("display", "none");
+  Skip.style("visibility", "hidden");
+  Next[1].style("visibility", "hidden");
   
-  Back[4].style("display", "none");
-  Next[4].style("display", "none");
+  Back[4].style("visibility", "hidden");
+  Next[4].style("visibility", "hidden");
   
   Map();
   for(let j = 0; j < 3; j++) 
@@ -385,7 +385,7 @@ function Next5()
     { 
       if(j==0) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else     { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -394,7 +394,7 @@ function Next5()
     { 
       if(j==0) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else     { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
@@ -402,7 +402,7 @@ function Next5()
 function Next6()
 {
   Area = 2;
-  Next[5].style("display", "none");
+  Next[5].style("visibility", "hidden");
   Map();
   for(let j = 0; j < 3; j++) 
   { 
@@ -411,7 +411,7 @@ function Next6()
       if(j==0)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else if(j==1) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -421,7 +421,7 @@ function Next6()
       if(j==0)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else if(j==1) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
@@ -429,7 +429,7 @@ function Next6()
 function Next7()
 {
   Area = 3;
-  Next[6].style("display", "none");
+  Next[6].style("visibility", "hidden");
   Map();
   for(let j = 0; j < 3; j++) 
   { 
@@ -438,7 +438,7 @@ function Next7()
       if(j<=1)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else if(j==2) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -448,7 +448,7 @@ function Next7()
       if(j<=1)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else if(j==2) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
@@ -456,7 +456,7 @@ function Next7()
 function Next8()
 {
   Area = 4;
-  Next[7].style("display", "none");
+  Next[7].style("visibility", "hidden");
   Map();
   for(let j = 0; j < 3; j++) 
   { 
@@ -465,7 +465,7 @@ function Next8()
       if(j<=2)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else if(j==3) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -475,7 +475,7 @@ function Next8()
       if(j<=2)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else if(j==3) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
@@ -483,7 +483,7 @@ function Next8()
 function Next9()
 {
   Area = 5;
-  Next[8].style("display", "none");
+  Next[8].style("visibility", "hidden");
   Map();
   for(let j = 0; j < 3; j++) 
   { 
@@ -492,7 +492,7 @@ function Next9()
       if(j<=3)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else if(j==4) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -502,7 +502,7 @@ function Next9()
       if(j<=3)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else if(j==4) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
@@ -510,7 +510,7 @@ function Next9()
 function Next10()
 {
   Area = 6;
-  Next[9].style("display", "none");
+  Next[9].style("visibility", "hidden");
   Map();
   for(let j = 0; j < 3; j++) 
   { 
@@ -519,7 +519,7 @@ function Next10()
       if(j<=4)      { image(Tree,      GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else if(j==5) { image(Explore,   GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
   for(let j = 3; j < 6; j++) 
@@ -529,15 +529,15 @@ function Next10()
       if(j<=4)      { image(Tree,      GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else if(j==5) { image(Explore,   GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
       else          { image(MagicTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize); }
-      Forest[j*7+i].style("display", "block"); 
+      Forest[j*7+i].style("visibility", "visible"); 
     } 
   }
 }
 
 function Next10_2()
 {
-  Re.style("display", "none");
-  Curiosity.style("display", "none");
+  Re.style("visibility", "hidden");
+  Curiosity.style("visibility", "hidden");
   Map();
   Map();
   for(let j = 0; j < 3; j++) 
@@ -589,22 +589,22 @@ function Next10_2()
   noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
   fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前進?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
         
-  Backtrace.style("display", "block");
-  Outer[1].style("display", "block");
+  Backtrace.style("visibility", "visible");
+  Outer[1].style("visibility", "visible");
 }
 
 function Next11()
 {
   Area = 7;
-  Outer[1].style("display", "none");
+  Outer[1].style("visibility", "hidden");
   Burn();
 }
 
 function Next12()
 {
   Area = 8;
-  Outer[2].style("display", "none");
-  Backtrace.style("display", "none");
+  Outer[2].style("visibility", "hidden");
+  Backtrace.style("visibility", "hidden");
   Burn();
 }
 
@@ -672,7 +672,7 @@ function Burn(N)
   
   if(Area == 1 && N <= 7)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber1[1])
@@ -732,7 +732,7 @@ function Burn(N)
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.04); text('繼續前進',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Next[5].style("display", "block");
+      Next[5].style("visibility", "visible");
     }
     else
     {
@@ -740,7 +740,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 5));
+      R = round(random(1, 8));
       
       if(R==1)
       {
@@ -782,14 +782,38 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
+      if(R==6)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('年過四十的他仍沒存款', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==7)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('年過三十仍是單身貴族', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
+      if(R==8)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('年過三十是教會的信徒', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('這不是內鬼嗎直接燒了',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱',   width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
   }
   if(Area == 2 && N > 7 && N <= 14)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber2[1] && N !=  WizardNumber2[2])
@@ -841,7 +865,7 @@ function Burn(N)
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.04); text('繼續前進',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Next[6].style("display", "block");
+      Next[6].style("visibility", "visible");
     }
     else
     {
@@ -893,12 +917,12 @@ function Burn(N)
       
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
   }
   if(Area == 3 && N > 14 && N <= 21)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber3[1] && N !=  WizardNumber3[2] && N !=  WizardNumber3[3])
@@ -964,7 +988,7 @@ function Burn(N)
         fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
       }
       
-      Next[7].style("display", "block");
+      Next[7].style("visibility", "visible");
     }
     else
     {
@@ -1032,12 +1056,12 @@ function Burn(N)
       
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
   }
   if(Area == 4 && N > 21 && N <= 28)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber4[1] && N !=  WizardNumber4[2] && N !=  WizardNumber4[3] && N !=  WizardNumber4[4])
@@ -1081,7 +1105,7 @@ function Burn(N)
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 90, 80); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Next[8].style("display", "block");
+      Next[8].style("visibility", "visible");
     }
     else
     {
@@ -1149,12 +1173,12 @@ function Burn(N)
       
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
   }
   if(Area == 5 && N > 28 && N <= 35)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber5[1] && N !=  WizardNumber5[2] && N !=  WizardNumber5[3] && N !=  WizardNumber5[4] && N !=  WizardNumber5[5])
@@ -1162,7 +1186,7 @@ function Burn(N)
       noStroke(); fill(216, 210, 228); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
       fill(84, 80, 90); textStyle(BOLD); textSize(width*0.05); text('通過了第五層', width/2, height/2-ButtonSize*0.3); textStyle(NORMAL);
       
-      R = round(random(1, 3));
+      R = round(random(1, 4));
       
       if(R==1)
       {
@@ -1188,9 +1212,17 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('紫色因為外星人不戴帽子', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
+      if(R==4)
+      {
+        image(Eggplant, width/2-ButtonSize, height/2-ButtonSize*2.7, ButtonSize*2, ButtonSize*2); 
+        fill(84, 80, 90); textSize(width*0.04); text('你成功來到森林深處', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('樹上的茄子偷偷告訴你', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('膝蓋中箭前他也是隻狐', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('繼續前進', width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Next[9].style("display", "block");
+      Next[9].style("visibility", "visible");
     }
     else
     {
@@ -1198,7 +1230,7 @@ function Burn(N)
       image(Green,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
-      R = round(random(1, 5));
+      R = round(random(1, 6));
       
       if(R==1)
       {
@@ -1240,14 +1272,22 @@ function Burn(N)
         fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
       }
       
+      if(R==6)
+      {
+        fill(84, 80, 90); textSize(width*0.04); text('你遇到了替死鬼男巫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('是擁有幸福家庭的丈夫', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('今天就決定拿他來燒了', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07);
+        fill(84, 80, 90); textSize(width*0.04); text('獵捕女巫失敗 ( 惱', width/2, height/2-ButtonSize*0.8+width*0.07+width*0.07+width*0.07+width*0.07+width*0.07);
+      }
+      
       noStroke(); fill(153, 140, 180); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(255); textStyle(BOLD); textSize(width*0.04); text('重新獵巫',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
   }
   if(Area == 6 && N > 35 && N <= 42)
   {
-    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("display", "none"); } }
+    for(let j = 0; j < 6; j++) { for(let i = 1; i < 8; i++) { Forest[j*7+i].style("visibility", "hidden"); } }
     noStroke(); fill(0, 100); rect(0, 0, width, height);
     
     if(N !=  WizardNumber6[1] && N !=  WizardNumber6[2] && N !=  WizardNumber6[3] && N !=  WizardNumber6[4] && N !=  WizardNumber6[5] && N !=  WizardNumber6[6])
@@ -1262,7 +1302,7 @@ function Burn(N)
       
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('重來一次',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-      Re.style("display", "block");
+      Re.style("visibility", "visible");
     }
     else
     {
@@ -1310,15 +1350,15 @@ function Burn(N)
         noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
         fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前進?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
         
-        Backtrace.style("display", "block");
-        Outer[1].style("display", "block");
+        Backtrace.style("visibility", "visible");
+        Outer[1].style("visibility", "visible");
       }
       else
       {
         noStroke(); fill(210, 103, 95); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
         fill(255); textStyle(BOLD); textSize(width*0.04); text('阻止 ▙ 祭',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
-        Re.style("display", "block");
-        Curiosity.style("display", "block");
+        Re.style("visibility", "visible");
+        Curiosity.style("visibility", "visible");
       }
     }
   }
@@ -1338,7 +1378,7 @@ function Burn(N)
     noStroke(); fill(90, 80, 85); rect(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4-ButtonSize/4, ButtonSize, width*0.02);
     fill(255); textStyle(BOLD); textSize(width*0.04); text('繼 ▚ 前▗ ?',   width*0.1+10+(width*0.4-ButtonSize/4)/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
     
-    Outer[2].style("display", "block");
+    Outer[2].style("visibility", "visible");
     
     for(let i = 0; i < 30; i++)
     {
@@ -1462,11 +1502,11 @@ function ReGame()
   Area = 0;
   D1 = D2 = D3 = 0;
   
-  Re.style("display", "none");
-  Outer[1].style("display", "none");
-  Outer[2].style("display", "none");
-  Backtrace.style("display", "none");
-  Curiosity.style("display", "none");
+  Re.style("visibility", "hidden");
+  Outer[1].style("visibility", "hidden");
+  Outer[2].style("visibility", "hidden");
+  Backtrace.style("visibility", "hidden");
+  Curiosity.style("visibility", "hidden");
   
   WizardNumber1[1] = round(random(1, 7));
   
