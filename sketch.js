@@ -7,7 +7,7 @@ let HippoHouse; let FoxHouse; let MiHouse; let WitchHouse; let DeadTree; let Sku
 let Hippo; let Wizard; let Explore; let Cheetah; let Diaper; let UnclePenguin; let Seal; let Fossil; let Ghost; let Eggplant; let Green; let Sacrifice; let Trial;
 let Cthugha; let YogSothoth; let Hastur;
 
-let HippoNumber = 0; let Area = 0; let WizardNumber1 = []; let WizardNumber2 = []; let WizardNumber3 = []; let WizardNumber4 = []; let WizardNumber5 = []; let WizardNumber6 = []; let O = 0;
+let HippoNumber = 0; let Area = 0; let WizardNumber1 = []; let WizardNumber2 = []; let WizardNumber3 = []; let WizardNumber4 = []; let WizardNumber5 = []; let WizardNumber6 = []; let O = 0; let Rage = 0;
 
 function preload() 
 {
@@ -237,7 +237,7 @@ function Ready()
   Re.style("background-color", "transparent");
   Re.style("border", "none");
   Re.style("visibility", "hidden");
-  Re.mousePressed(ReGame);
+  Re.mousePressed(AngerJudgment);
   
   Curiosity = createButton("");
   Curiosity.position(width/2-ButtonSize*0.95, height/2-ButtonSize*2.8);
@@ -254,7 +254,7 @@ function Ready()
   Backtrace.style("background-color", "transparent");
   Backtrace.style("border", "none");
   Backtrace.style("visibility", "hidden");
-  Backtrace.mousePressed(ReGame);
+  Backtrace.mousePressed(AngerJudgment);
   
   Outer[1] = createButton("");
   Outer[1].position(width*0.1+10, height/2-ButtonSize/2+width*0.4+ButtonSize/4);
@@ -740,6 +740,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
+      Rage++;
       R = round(random(1, 8));
       
       if(R==1)
@@ -873,6 +874,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
+      Rage++;
       R = round(random(1, 5));
       
       if(R==1)
@@ -996,6 +998,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
+      Rage++;
       R = round(random(1, 7));
       
       if(R==1)
@@ -1113,6 +1116,7 @@ function Burn(N)
       image(Wizard,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
+      Rage++;
       R = round(random(1, 7));
       
       if(R==1)
@@ -1230,6 +1234,7 @@ function Burn(N)
       image(Green,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       fill(84, 80, 90); textSize(width*0.05); text('算了，好麻煩', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
       
+      Rage++;
       R = round(random(1, 6));
       
       if(R==1)
@@ -1303,12 +1308,15 @@ function Burn(N)
       noStroke(); fill(255); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
       fill(84, 80, 90); textStyle(BOLD); textSize(width*0.04); text('重來一次',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
       Re.style("visibility", "visible");
+      
+      Rage = 0;
     }
     else
     {
       noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
       image(Sacrifice,  width/2-ButtonSize*0.95, height/2-ButtonSize*2.8, ButtonSize*1.8, ButtonSize*1.8); textStyle(BOLD);
       
+      Rage++;
       R = round(random(1, 3));
       
       if(R==1)
@@ -1489,7 +1497,6 @@ function draw()
       textSize(width*0.04); text('你理解了一切', width/2, height/2-ButtonSize+width*0.07+width*0.07+width*0.07);
     }
   }
-  print(Area);
 }
 
 function windowResized() 
@@ -1497,10 +1504,51 @@ function windowResized()
   window.location.reload();
 }
 
+function AngerJudgment()
+{
+  if(Rage>=20)
+  {
+    Map();
+    for(let j = 0; j < 3; j++) 
+    { 
+      for(let i = 1; i < 8; i++) 
+      { 
+        image(DeadTree, GameWidth/7*(i-1)+5, height/2+ButtonSize/2+GameWidth/7*(2-j), ButtonSize, ButtonSize);
+      } 
+    }
+    for(let j = 3; j < 6; j++) 
+    { 
+      for(let i = 1; i < 8; i++) 
+      { 
+        image(DeadTree, GameWidth/7*(i-1)+5, height/2-ButtonSize*1.7-ButtonSize*(j-3), ButtonSize, ButtonSize);
+      } 
+    }
+    noStroke(); fill(100, 20, 0, 100); rect(0, 0, width, height);
+    noStroke(); fill(228, 210, 211); rect(width*0.1, height/2-width*0.4-ButtonSize/2, width*0.8, width*0.8, width*0.02);
+    image(Hippo,  width/2-ButtonSize-5, height/2-ButtonSize*3, ButtonSize*2, ButtonSize*2);
+    
+    fill(84, 80, 90); textSize(width*0.05); text('河你馬，不獵了', width/2, height/2-ButtonSize*0.5); textStyle(NORMAL);
+    fill(84, 80, 90); textSize(width*0.04); text('說到底為啥非得照規矩來', width/2, height/2-ButtonSize/2+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('你煩躁地點燃了整個森林', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07);
+    fill(84, 80, 90); textSize(width*0.04); text('將女巫連同一切焚燒殆盡', width/2, height/2-ButtonSize/2+width*0.07+width*0.07+width*0.07+width*0.07);
+    
+    noStroke(); fill(210, 103, 95); rect(width/2-width*0.2, height/2-ButtonSize/2+width*0.4+ButtonSize/4, width*0.4, ButtonSize, width*0.02);
+    fill(255); textStyle(BOLD); textSize(width*0.04); text('重新焚燒',   width/2, height/2-ButtonSize/2+width*0.4+ButtonSize/4+ButtonSize/2);
+    
+    Rage = 0;
+  }
+  else
+  {
+    ReGame();
+  }
+}
+
 function ReGame()
 {
   Area = 0;
   D1 = D2 = D3 = 0;
+  
+  print(Rage);
   
   Re.style("visibility", "hidden");
   Outer[1].style("visibility", "hidden");
