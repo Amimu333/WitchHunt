@@ -1506,7 +1506,7 @@ function windowResized()
 
 function AngerJudgment()
 {
-  if(Rage>=20)
+  if(Rage>=10)
   {
     Map();
     for(let j = 0; j < 3; j++) 
